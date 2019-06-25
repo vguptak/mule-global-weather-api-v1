@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:utils="http://www.mulesoft.org/schema/mule/utils"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/utils http://www.mulesoft.org/schema/mule/utils/current/mule-utils.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+
+	<choice-exception-strategy name="globalChoice_Exception_Strategy">
+		<catch-exception-strategy
+			when="#[exception.causeMatches('com.mulesoft.weave.*')]" doc:name="Data Error">
+            <logger message="Data Error" level="INFO" doc:name="Logger"/>
+			<set-variable variableName="errorType" value="&quot;Data Error&quot;"
+				doc:name="set Exception Type" />
+			<set-variable variableName="errorMessage" value="#[exception.?cause or exception]"
+				doc:name="setException" />
+            <set-payload value="#[flowVars.errorMessage]" doc:name="Set Payload"/>
+		</catch-exception-strategy>
+		<catch-exception-strategy doc:name="Connection Error"
+			when="#[exception.causeMatches('org.mule.api.ConnectionException') || exception.causeMatches('java.util.concurrent.TimeoutException') ]">
+            <logger message="Connection Error" level="INFO" doc:name="Logger"/>
+			<set-variable variableName="errorType" value="&quot;Technical Error&quot;"
+				doc:name="set Exception Type" />
+			<set-variable variableName="errorMessage" value="#[exception.?cause or exception]"
+				doc:name="setException" />
+            <set-payload value="#[flowVars.errorMessage]" doc:name="Set Payload"/>
+		</catch-exception-strategy>
+		<catch-exception-strategy doc:name="Catch Exception Strategy">
+            <logger message="Functional Error" level="INFO" doc:name="Logger"/>
+			<set-variable variableName="errorType"
+				value="&quot;Functional Error&quot;" doc:name="set Exception Type" />
+			<set-variable variableName="errorMessage" value="#[exception.?cause or exception]"
+				doc:name="setException" />
+            <set-payload value="#[flowVars.errorMessage]" doc:name="Set Payload"/>
+		</catch-exception-strategy>
+	</choice-exception-strategy>
+
+</mule>

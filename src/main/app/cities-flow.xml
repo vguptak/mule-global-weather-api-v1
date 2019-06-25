@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:ws="http://www.mulesoft.org/schema/mule/ws" xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ws http://www.mulesoft.org/schema/mule/ws/current/mule-ws.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd">
+    <flow name="cities-flow">
+        <logger message="cities subflow start" level="INFO" doc:name="Logger"/>
+        <dw:transform-message doc:name="Transform Message" metadata:id="135b81ef-32f1-47fa-8147-5ab583ce773f">
+            <dw:input-payload mimeType="application/json"/>
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/xml
+%namespace ns0 http://www.webserviceX.NET
+---
+{
+	ns0#GetCitiesByCountry: {
+		ns0#CountryName: payload.CountryName
+	}
+}]]></dw:set-payload>
+        </dw:transform-message>
+        <ws:consumer config-ref="Global_Weather_Web_Service_Consumer" operation="GetCitiesByCountry" doc:name="Global Weather Web Service"/>
+        <dw:transform-message doc:name="Transform Message" metadata:id="84b6340a-eaac-4bcd-bad5-52efa0e4b7d5">
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/json skipNullOn = "everywhere"
+%namespace ns0 http://www.webserviceX.NET
+---
+(payload.ns0#GetCitiesByCountryResponse.*ns0#GetCitiesByCountryResult map ((getCitiesByCountryResult , indexOfGetCitiesByCountryResult) -> {
+	Country: getCitiesByCountryResult.ns0#Country,
+	City: getCitiesByCountryResult.ns0#City
+})) when payload.ns0#GetCitiesByCountryResponse.*ns0#GetCitiesByCountryResult != null otherwise []]]></dw:set-payload>
+        </dw:transform-message>
+        <exception-strategy ref="globalChoice_Exception_Strategy" doc:name="Reference Exception Strategy"/>
+    </flow>
+</mule>

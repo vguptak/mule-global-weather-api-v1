@@ -1,0 +1,54 @@
+#%RAML 1.0
+baseUri: https://anypoint.mulesoft.com/mocking/api/v1/links/f9267b4c-9259-41ab-a0d0-cb46e0f41745/ # 
+title: WeatherAPI
+version: v1
+protocols: [HTTPS]
+mediaType: application/json
+securitySchemes:
+  basic:
+    description: |
+      This API supports Basic Authentication.
+    type: Basic Authentication
+
+
+traits:
+  ClientIdEnforceable: !include common/traits/client-id-enforceable.raml
+  Countable: !include common/traits/countable.raml
+  Pageable: !include common/traits/pageable.raml
+  Sortable: !include common/traits/sortable.raml
+  Errorable: !include common/traits/errorable.raml
+  Trackable: !include common/traits/trackable.raml
+  Cacheable: !include common/traits/cacheable.raml
+  TimeCacheable: !include common/traits/time-cacheable.raml
+  ContentCacheable: !include common/traits/content-cacheable.raml
+
+types:
+  Weather: !include data-types/weather.raml
+  City: !include data-types/cities.raml
+
+/weather:
+    post:
+        description: Get weather report for all major cities around the world.
+        is: [Errorable]
+        
+        body:
+          type: Weather
+          example: !include examples/weatherRequest.json
+        responses:
+          200:
+            description: Weather details successfully returned.
+            body:
+              example: !include examples/weatherResponse.json
+            
+/cities:
+    post:
+        description: Get all major cities by country name
+        is: [Errorable]
+        body:
+          type: City
+          example: !include examples/citiesRequest.json
+        responses:
+          200:
+            description: Cities successfully returned.
+            body:
+              example: !include examples/citiesResponse.json

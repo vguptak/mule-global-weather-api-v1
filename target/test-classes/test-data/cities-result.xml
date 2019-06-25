@@ -1,0 +1,266 @@
+<GetCitiesByCountryResponse xmlns="http://tempuri.org/UserProfile" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Archerfield Aerodrome</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Amberley Aerodrome</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Alice Springs Aerodrome</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Brisbane Airport M. O</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Coolangatta Airport Aws</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Cairns Airport</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Charleville Airport</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Gladstone</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Longreach Airport</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Mount Isa Amo</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Mackay Mo</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Oakey Aerodrome</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Proserpine Airport</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Rockhampton Airport</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Broome Airport</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Townsville Amo</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Weipa City</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Gove Airport</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Tennant Creek Airport</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Yulara Aws</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Albury Airport</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Devonport East</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Goldstream Aws</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>East Sale Aerodrome</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Hobart Airport</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Launceston Airport</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Laverton Aerodrome</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Moorabbin Airport Aws</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Mount Gambier Aerodrome</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Mildura Airport</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Melbourne Airport</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Macquarie Island</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Wynyard West</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Adelaide Airport</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Albany Airport</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Broken Hill Patton Street</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Ceduna Airport</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Derby</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Darwin Airport</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Bullsbrook Pearce Amo</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Edinburgh M. O.</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Forrest Airport</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Geraldton Airport</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Kalgoorlie Boulder Amo</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Kununurra Kununurra Aws</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Leigh Creek Airport</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Learmonth Airport</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Meekatharra Airport</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Port Hedland Pardoo</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Parafield Airport</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Belmont Perth Airport</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Katherine Aerodrome</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Woomera Aerodrome</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Bankstown Airport Aws</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Canberra</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Coffs Harbour Mo</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Cooma</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Camden Airport</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Dubbo</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Norfolk Island Airport</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Nowra Ran Air Station</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Richmond Aus-Afb</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Sydney Airport</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Tamworth Airport</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Wagga Airport</City>
+  </GetCitiesByCountryResult>
+  <GetCitiesByCountryResult>
+    <Country>Australia</Country>
+    <City>Williamtown Aerodrome</City>
+  </GetCitiesByCountryResult>
+</GetCitiesByCountryResponse>
