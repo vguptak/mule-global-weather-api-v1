@@ -23,7 +23,9 @@ http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee
 	}
 }]]></dw:set-payload>
         </dw:transform-message>
-        <ws:consumer config-ref="Global_Weather_Web_Service_Consumer" operation="GetWeather" doc:name="Global Weather Web Service"/>
+        <until-successful maxRetries="3" doc:name="Until Successful">
+            <ws:consumer config-ref="Global_Weather_Web_Service_Consumer" operation="GetWeather" doc:name="Global Weather Web Service"/>
+        </until-successful>
         <dw:transform-message doc:name="Transform Message" metadata:id="84b6340a-eaac-4bcd-bad5-52efa0e4b7d5">
             <dw:set-payload><![CDATA[%dw 1.0
 %output application/json skipNullOn = "everywhere"
