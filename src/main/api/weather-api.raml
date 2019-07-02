@@ -29,6 +29,7 @@ types:
 /weather:
     post:
         description: Get weather report for all major cities around the world.
+        securedBy: [basic]
         is: [Errorable]
         
         body:
@@ -43,6 +44,7 @@ types:
 /cities:
     post:
         description: Get all major cities by country name
+        securedBy: [basic]
         is: [Errorable]
         body:
           type: City
