@@ -41,8 +41,12 @@ http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/m
 http://www.mulesoft.org/schema/mule/spring-security http://www.mulesoft.org/schema/mule/spring-security/3.1/mule-spring-security.xsd
 http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.0.xsd">
 
-		<!-- HTTP LISTNER -->
-	<http:listener-config name="weather-api-httpListenerConfig" host="0.0.0.0" port="${https.private.port}" doc:name="HTTP Listener Configuration"/>
+	<!-- HTTP LISTNER -->
+    <http:listener-config name="weather-api-httpListenerConfig" host="0.0.0.0" port="${https.private.port}" doc:name="HTTP Listener Configuration" protocol="HTTPS">
+        <tls:context>
+            <tls:key-store type="jks" path="certificate/keystore.jks" keyPassword="${key.password}" password="${key.password}"/>
+        </tls:context>
+    </http:listener-config>
     <apikit:config name="weather-api-config" raml="weather-api.raml" consoleEnabled="false" doc:name="Router"/>
     <ws:consumer-config name="Global_Weather_Web_Service_Consumer" wsdlLocation="wsdl/global-weather.wsdl" service="GlobalWeather" port="GlobalWeatherSoap12" serviceAddress="${global.weather.service.url}" doc:name="Web Service Consumer"/>
     
