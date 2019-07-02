@@ -16,7 +16,7 @@ http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee
         <apikit:console config-ref="weather-api-config" doc:name="APIkit Console"/>
     </flow>
     <flow name="post:/cities:application/json:weather-api-config">
-        <set-payload value="#[payload]" doc:name="Set Payload"/>
+        <byte-array-to-string-transformer doc:name="Byte Array to String"/>
         <flow-ref name="cities-flow" doc:name="Cities Flow"/>
         <dw:transform-message doc:name="Transform Message" metadata:id="7d317e90-9687-44b1-b9bb-2e25c77bd662">
             <dw:set-payload><![CDATA[%dw 1.0
@@ -31,7 +31,7 @@ http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee
         </dw:transform-message>
     </flow>
     <flow name="post:/weather:application/json:weather-api-config">
-        <set-payload value="#[payload]" doc:name="Set Payload"/>
+        <byte-array-to-string-transformer doc:name="Byte Array to String"/>
         <flow-ref name="weather-flow" doc:name="Weather Flow"/>
     </flow>
     <apikit:mapping-exception-strategy name="weather-api-apiKitGlobalExceptionMapping">
