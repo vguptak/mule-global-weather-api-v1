@@ -7,6 +7,7 @@ http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee
     <flow name="weather-api-main">
         <http:listener config-ref="weather-api-httpListenerConfig" path="/api/*" doc:name="HTTP"/>
         <logger message="Pull http metadata" level="INFO" doc:name="Logger"/>
+	<http:basic-security-filter realm="mule-realm" />
         <apikit:router config-ref="weather-api-config" doc:name="APIkit Router"/>
         <logger message="Push http metadata" level="INFO" doc:name="Logger"/>
         <exception-strategy ref="weather-api-apiKitGlobalExceptionMapping" doc:name="Reference Exception Strategy"/>
