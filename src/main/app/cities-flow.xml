@@ -29,12 +29,12 @@ http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee
         <dw:transform-message doc:name="Transform Message" metadata:id="84b6340a-eaac-4bcd-bad5-52efa0e4b7d5">
             <dw:set-payload><![CDATA[%dw 1.0
 %output application/json skipNullOn = "everywhere"
-%namespace ns0 http://www.webserviceX.NET
+
 ---
-(payload.ns0#GetCitiesByCountryResponse.*ns0#GetCitiesByCountryResult map ((getCitiesByCountryResult , indexOfGetCitiesByCountryResult) -> {
-	Country: getCitiesByCountryResult.ns0#Country,
-	City: getCitiesByCountryResult.ns0#City
-})) when payload.ns0#GetCitiesByCountryResponse.*ns0#GetCitiesByCountryResult != null otherwise []]]></dw:set-payload>
+(payload.NewDataSet.*Table map {
+	Country: $.Country,
+	City: $.City
+}) when payload.NewDataSet.*Table != null otherwise []]]></dw:set-payload>
         </dw:transform-message>
         <exception-strategy ref="globalChoice_Exception_Strategy" doc:name="Reference Exception Strategy"/>
     </flow>
