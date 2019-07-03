@@ -35,7 +35,7 @@ http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee
 (payload.ns0#GetCitiesByCountryResponse.ns0#NewDataSet.ns0#Table map ((getCitiesByCountryResult , indexOfTable) ->   {
 	Country: getCitiesByCountryResult.ns0#Country,
 	City: getCitiesByCountryResult.ns0#City
-})) when payload..ns0#GetCitiesByCountryResponse.ns0#NewDataSet.ns0#Table  != null otherwise []]]></dw:set-payload>
+})) when payload.ns0#GetCitiesByCountryResponse.ns0#NewDataSet.ns0#Table  != null otherwise []]]></dw:set-payload>
         </dw:transform-message>
         <exception-strategy ref="globalChoice_Exception_Strategy" doc:name="Reference Exception Strategy"/>
     </flow>
